@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+<title>Bouncing Ball</title>
+<style>
+body {
+  background: #000;
+  text-align: center;
+}
+#stage {
+  width: 800px;
+  height: 600px;
+  border: 4px solid #fff;
+  margin: auto;
+  background: #fff;
+}
+#top-bar {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+#top-bar h1 {
+  font-family: 'Iceland', cursive;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+#floor {
+  height: 470px;
+  border: 40px solid #000;
+  border-bottom-color: white;
+  border-radius: 50% 50% 0 0;
+  background-color:#000;
+  margin: 0;
+  padding: 0;
+}
+#back-wall {
+  width: 100%;
+  height: 95%;
+  margin-top:5%;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#ball {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 12px;
+  background-image: radial-gradient(  circle closest-side,  #fff,  #999);
+  background-position: -8px -4px;
+  color:#fff;
+  position: relative;
+  animation: upndown .9s infinite, left-right 3.9s linear infinite;
+  -webkit-animation: upndown .9s infinite, left-right 3.9s linear infinite;
+  left: 20px;
+  bottom: 80px;
+}
+@keyframes upndown {
+    from, to {
+      bottom:80px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 300px;
+      -webkit-animation-timing-function: ease-in;
+    }
+}
+@-webkit-keyframes upndown {
+    from, to {
+      bottom:80px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 300px;
+      -webkit-animation-timing-function: ease-in;
+    }
+}
+@keyframes left-right {50%{left:720px}}
+@-webkit-keyframes left-right {50%{left:720px}}
+</style>
+</head>
+
+<body>
+<div id="stage">
+  <div id="top-bar"><h1>Bouncing Ball</h1></div>
+  <div id="floor">
+    <div id="back-wall"></div>
+  </div>
+  <b id="ball" name="ball">.</b>
+</div>
+</body>
+</html>
