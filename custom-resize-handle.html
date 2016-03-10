@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Custom Resize Handle with CSS</title>
+  <style>
+    #wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .handle {
+      content: "";
+      display: block;
+      height: 16px;
+      width: 16px;
+      background: url(http://www.sfbullet.com/wp-content/uploads/2015/08/SFBB-Web-Icon-Big-55c94330v1_site_icon-16x16.png) 16px 16px;
+      z-index: 1;
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      pointer-events: none;
+    }
+
+    #resizable {
+      width: 150px;
+      height: 150px;
+      padding: 10px 16px 16px 10px;
+      border: 2px solid #09F;
+      resize: horizontal;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div class="handle"></div>
+  <div id="resizable">
+    <h4>Resize My DIV</h4>
+    <p>This is only one way to do it, another would be to add a pseudo-element to the div and style that.</p>
+  </div>
+</div>
+</body>
+</html>
